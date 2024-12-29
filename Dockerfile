@@ -50,7 +50,7 @@ WORKDIR /app
 
 EXPOSE 80
 
-RUN addgroup -g 100 -S app && adduser -u 99 -S app -G app
+RUN addgroup -g 1000 -S app && adduser -u 1000 -S app -G app
 
 COPY --from=builder --chown=app:app /usr/local/bundle/ /usr/local/bundle/
 COPY --from=builder --chown=app:app /app/ /app/
